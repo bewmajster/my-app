@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Box, Button } from "@mui/material";
 
 const Navigation = () => (
-  <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+  <Box sx={{ flexGrow: 1, display: { xs: "flex" } }}>
     <Button
       component={Link}
       key="home"

@@ -16,7 +16,7 @@ const AppLayout = () => (
 
     <BrowserRouter>
       <AppBar position="static">
-        <Container maxWidth="xl">
+        <Container>
           <Toolbar disableGutters>
             <Title />
             <Navigation />
@@ -24,7 +24,7 @@ const AppLayout = () => (
         </Container>
       </AppBar>
 
-      <Container maxWidth="xl">
+      <Container>
         <Router />
       </Container>
     </BrowserRouter>
