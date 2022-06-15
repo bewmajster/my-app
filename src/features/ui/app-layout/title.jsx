@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { Adb as AdbIcon } from "@mui/icons-material";
 
-const AppTitle = () => (
+const Title = () => (
   <>
     <AdbIcon sx={{ display: { md: "flex" }, mr: 1 }} />
 
@@ -26,4 +26,4 @@ const AppTitle = () => (
   </>
 );
 
-export default AppTitle;
+export default Title;

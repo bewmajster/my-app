@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Box, Button } from "@mui/material";
 
-const AppMenu = () => (
+const Navigation = () => (
   <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
     <Button
       component={Link}
@@ -23,4 +23,4 @@ const AppMenu = () => (
   </Box>
 );
 
-export default AppMenu;
+export default Navigation;

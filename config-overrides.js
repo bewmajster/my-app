@@ -5,7 +5,8 @@ const { override, addWebpackAlias, fixBabelImports } = require("customize-cra");
 
 module.exports = override(
   addWebpackAlias({
-    ["@"]: path.resolve(__dirname, "src"),
+    ["@features"]: path.resolve(__dirname, "src/features"),
+    ["@pages"]: path.resolve(__dirname, "src/pages"),
   }),
   fixBabelImports([
     [

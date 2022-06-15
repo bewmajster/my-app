@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
 import { AppBar, Toolbar, Container } from "@mui/material";
 
-import AppTitle from "./AppTitle";
-import AppMenu from "./AppMenu";
+import Title from "./title";
+import Navigation from "./navigation";
 
 const Layout = () => (
   <>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AppTitle />
-          <AppMenu />
+          <Title />
+          <Navigation />
         </Toolbar>
       </Container>
     </AppBar>
