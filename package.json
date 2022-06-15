@@ -28,7 +28,23 @@
   "eslintConfig": {
     "extends": [
       "react-app"
-    ]
+    ],
+    "rules": {
+      "no-restricted-imports": [
+        "error",
+        {
+          "patterns": [
+            {
+              "group": [
+                "@features/*/*",
+                "**/./*/*"
+              ],
+              "message": "Use only exposed components in index.js files"
+            }
+          ]
+        }
+      ]
+    }
   },
   "browserslist": {
     "production": [
