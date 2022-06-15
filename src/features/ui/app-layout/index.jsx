@@ -3,31 +3,32 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import { Outlet } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { CssBaseline } from "@mui/material";
-import { AppBar, Toolbar, Container } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
+import { CssBaseline, AppBar, Toolbar, Container } from "@mui/material";
 
-import Title from "./title";
-import Navigation from "./navigation";
+import { Title, Navigation } from "./components";
+import Router from "./router";
 
-const Layout = () => (
+const AppLayout = () => (
   <HelmetProvider>
     <CssBaseline />
 
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Title />
-          <Navigation />
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <BrowserRouter>
+      <AppBar position="static">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Title />
+            <Navigation />
+          </Toolbar>
+        </Container>
+      </AppBar>
 
-    <Container maxWidth="xl">
-      <Outlet />
-    </Container>
+      <Container maxWidth="xl">
+        <Router />
+      </Container>
+    </BrowserRouter>
   </HelmetProvider>
 );
 
-export default Layout;
+export default AppLayout;
