@@ -1,4 +1,4 @@
-import Title from "./title";
-import Navigation from "./navigation";
+import AppHeader from "./app-header";
+import AppMain from "./app-main";
 
-export { Title, Navigation };
+export { AppHeader, AppMain };

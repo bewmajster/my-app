@@ -5,30 +5,24 @@ import "@fontsource/roboto/700.css";
 
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter } from "react-router-dom";
-import { CssBaseline, AppBar, Toolbar, Container } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import { CssBaseline } from "@mui/material";
 
-import { Title, Navigation } from "./components";
-import Router from "./router";
+import { AppHeader, AppMain } from "./components";
+import { ReadSystemTheme } from "./utils";
 
 const AppLayout = () => (
-  <HelmetProvider>
+  <ThemeProvider theme={ReadSystemTheme()}>
     <CssBaseline />
 
     <BrowserRouter>
-      <AppBar position="static">
-        <Container>
-          <Toolbar disableGutters>
-            <Title />
-            <Navigation />
-          </Toolbar>
-        </Container>
-      </AppBar>
+      <AppHeader />
 
-      <Container>
-        <Router />
-      </Container>
+      <HelmetProvider>
+        <AppMain />
+      </HelmetProvider>
     </BrowserRouter>
-  </HelmetProvider>
+  </ThemeProvider>
 );
 
 export default AppLayout;
