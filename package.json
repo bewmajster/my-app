@@ -37,7 +37,8 @@
             {
               "group": [
                 "@features/*/*",
-                "**/./*/*"
+                "**/./*/*",
+                "!**/./assets/*"
               ],
               "message": "Use only exposed components in index.js files"
             }
